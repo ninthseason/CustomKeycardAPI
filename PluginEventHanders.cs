@@ -16,7 +16,7 @@ namespace CustomKeycardAPI
         public override void OnPlayerPickedUpItem(PlayerPickedUpItemEventArgs ev)
         {
             if (!CustomKeycardAPI.dtable.ContainsKey(ev.Player.UserId)) { return; }
-            Logger.Info($"Player {ev.Player.UserId} trigger customcardstyle");
+            //Logger.Info($"Player {ev.Player.UserId} trigger customcardstyle");
             switch (ev.Item.Type)
             {
                 case ItemType.KeycardMTFPrivate:
@@ -25,7 +25,7 @@ namespace CustomKeycardAPI
                     KeycardItem.CreateCustomKeycardTaskForce(ev.Player,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardMTFPrivate.CardName,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardMTFPrivate.HolderName,
-                        new Interactables.Interobjects.DoorUtils.KeycardLevels(1, 2, 2),
+                        new Interactables.Interobjects.DoorUtils.KeycardLevels(2, 2, 1),
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardMTFPrivate.PrimaryColor,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardMTFPrivate.SecondaryColor,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardMTFPrivate.SeriesCode,
@@ -77,7 +77,7 @@ namespace CustomKeycardAPI
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.CardName,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.HolderName,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.CardLabel,
-                        new Interactables.Interobjects.DoorUtils.KeycardLevels(0, 0, 1),
+                        new Interactables.Interobjects.DoorUtils.KeycardLevels(1, 0, 0),
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.PrimaryColor,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.SecondaryColor,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.LabelColor,
@@ -90,7 +90,7 @@ namespace CustomKeycardAPI
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.CardName,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.HolderName,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.CardLabel,
-                        new Interactables.Interobjects.DoorUtils.KeycardLevels(0, 0, 2),
+                        new Interactables.Interobjects.DoorUtils.KeycardLevels(2, 0, 0),
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.PrimaryColor,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.SecondaryColor,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.LabelColor,
@@ -103,7 +103,7 @@ namespace CustomKeycardAPI
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.CardName,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.HolderName,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.CardLabel,
-                        new Interactables.Interobjects.DoorUtils.KeycardLevels(1, 0, 2),
+                        new Interactables.Interobjects.DoorUtils.KeycardLevels(2, 0, 1),
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.PrimaryColor,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.SecondaryColor,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.LabelColor,
@@ -116,7 +116,7 @@ namespace CustomKeycardAPI
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.CardName,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.HolderName,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.CardLabel,
-                        new Interactables.Interobjects.DoorUtils.KeycardLevels(1, 0, 3),
+                        new Interactables.Interobjects.DoorUtils.KeycardLevels(3, 0, 1),
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.PrimaryColor,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.SecondaryColor,
                         CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.LabelColor,
@@ -200,7 +200,7 @@ namespace CustomKeycardAPI
                         KeycardItem.CreateCustomKeycardTaskForce(ev.Player,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardMTFPrivate.CardName,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardMTFPrivate.HolderName,
-                            new Interactables.Interobjects.DoorUtils.KeycardLevels(1, 2, 2),
+                            new Interactables.Interobjects.DoorUtils.KeycardLevels(2, 2, 1),
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardMTFPrivate.PrimaryColor,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardMTFPrivate.SecondaryColor,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardMTFPrivate.SeriesCode,
@@ -248,7 +248,7 @@ namespace CustomKeycardAPI
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.CardName,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.HolderName,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.CardLabel,
-                            new Interactables.Interobjects.DoorUtils.KeycardLevels(0, 0, 1),
+                            new Interactables.Interobjects.DoorUtils.KeycardLevels(1, 0, 0),
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.PrimaryColor,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.SecondaryColor,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardJanitor.LabelColor,
@@ -260,7 +260,7 @@ namespace CustomKeycardAPI
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.CardName,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.HolderName,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.CardLabel,
-                            new Interactables.Interobjects.DoorUtils.KeycardLevels(0, 0, 2),
+                            new Interactables.Interobjects.DoorUtils.KeycardLevels(2, 0, 0),
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.PrimaryColor,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.SecondaryColor,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardScientist.LabelColor,
@@ -272,7 +272,7 @@ namespace CustomKeycardAPI
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.CardName,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.HolderName,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.CardLabel,
-                            new Interactables.Interobjects.DoorUtils.KeycardLevels(1, 0, 2),
+                            new Interactables.Interobjects.DoorUtils.KeycardLevels(2, 0, 1),
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.PrimaryColor,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.SecondaryColor,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardResearchCoordinator.LabelColor,
@@ -284,7 +284,7 @@ namespace CustomKeycardAPI
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.CardName,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.HolderName,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.CardLabel,
-                            new Interactables.Interobjects.DoorUtils.KeycardLevels(1, 0, 3),
+                            new Interactables.Interobjects.DoorUtils.KeycardLevels(3, 0, 1),
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.PrimaryColor,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.SecondaryColor,
                             CustomKeycardAPI.dtable[ev.Player.UserId].KeycardContainmentEngineer.LabelColor,
