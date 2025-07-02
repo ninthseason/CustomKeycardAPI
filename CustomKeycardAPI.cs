@@ -1,6 +1,9 @@
-﻿using LabApi.Events.CustomHandlers;
+﻿using InventorySystem;
+using LabApi.Events.CustomHandlers;
 using LabApi.Features;
+using LabApi.Features.Wrappers;
 using LabApi.Loader.Features.Plugins;
+using Scp914.Processors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +11,6 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using UnityEngine;
-using Logger = LabApi.Features.Console.Logger;
 
 namespace CustomKeycardAPI
 {
@@ -31,6 +33,14 @@ namespace CustomKeycardAPI
 
         public override void Enable()
         {
+            LabApi.Features.Wrappers.Scp914.SetItemProcessor(ItemType.KeycardCustomManagement, new KeycardScp914ItemProcessor());
+            LabApi.Features.Wrappers.Scp914.SetItemProcessor(ItemType.KeycardCustomMetalCase, new KeycardScp914ItemProcessor());
+            LabApi.Features.Wrappers.Scp914.SetItemProcessor(ItemType.KeycardCustomSite02, new KeycardScp914ItemProcessor());
+            LabApi.Features.Wrappers.Scp914.SetItemProcessor(ItemType.KeycardCustomTaskForce, new KeycardScp914ItemProcessor());
+            //var Scp914Processor = ItemType.KeycardFacilityManager.GetTemplate().GetComponent<Scp914ItemProcessor>();
+            //Logger.Info(Scp914Processor);
+            //var Scp914Processor2 = ItemType.KeycardFacilityManager.GetTemplate().GetComponent<StandardItemProcessor>();
+            //Logger.Info(Scp914Processor2);
             RefreshDataBase();
             CustomHandlersManager.RegisterEventsHandler(Events);
         }
@@ -313,5 +323,6 @@ namespace CustomKeycardAPI
         {
             throw new NotImplementedException();
         }
+        
     }
 }
